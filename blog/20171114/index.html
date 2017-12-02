@@ -1,0 +1,751 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>初识golang—单例模式</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.28-DEV" />
+        
+
+
+        
+        
+            
+        
+
+        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="初识golang—单例模式"/>
+<meta name="twitter:description" content="单例模式是设计模式里最为常用的一种，应用该设计模式的目的是保证类仅有一个全局的对象实例。
+懒汉模式(Lazy Loading) 懒汉模式是最为简单常见的，最大的缺点是非线程安全的。
+type singleton struct { //... } //private var instance *singleton //public func GetInstance() *singleton { if instance == nil { instance = &amp;singleton{} } return instance }  带锁的单例模式 sync包提供两种锁类型：Mutex和RWMutex。Mutex是我们常见的锁类型，当一个goroutine获得Mutex之后，其它的goroutine只能进行等待直到该Mutex被释放。而RWMutex则是较为友好的单读多写模型，写锁会阻止其它所任何goroutine访问，而读锁则只会阻止写而不阻止读。
+这里使用了Go的sync.Mutex，解决了懒汉模式的线程安全问题，但是在已生成实例后每次访问还都会调用锁，造成不必要的开销。
+type singleton sturct { } var instance *singleton var mu sync.Mutex func GetInstance() *singleton { mu.Lock() defer mu.Unlock() if instance == nil { instance = &amp;singleton{} } return instance }  带检查锁的单例模式 通过再封加一层判断，可以解决不必要开销的问题。
+if instance == nil { mu."/>
+
+        <meta property="og:title" content="初识golang—单例模式" />
+<meta property="og:description" content="单例模式是设计模式里最为常用的一种，应用该设计模式的目的是保证类仅有一个全局的对象实例。
+懒汉模式(Lazy Loading) 懒汉模式是最为简单常见的，最大的缺点是非线程安全的。
+type singleton struct { //... } //private var instance *singleton //public func GetInstance() *singleton { if instance == nil { instance = &amp;singleton{} } return instance }  带锁的单例模式 sync包提供两种锁类型：Mutex和RWMutex。Mutex是我们常见的锁类型，当一个goroutine获得Mutex之后，其它的goroutine只能进行等待直到该Mutex被释放。而RWMutex则是较为友好的单读多写模型，写锁会阻止其它所任何goroutine访问，而读锁则只会阻止写而不阻止读。
+这里使用了Go的sync.Mutex，解决了懒汉模式的线程安全问题，但是在已生成实例后每次访问还都会调用锁，造成不必要的开销。
+type singleton sturct { } var instance *singleton var mu sync.Mutex func GetInstance() *singleton { mu.Lock() defer mu.Unlock() if instance == nil { instance = &amp;singleton{} } return instance }  带检查锁的单例模式 通过再封加一层判断，可以解决不必要开销的问题。
+if instance == nil { mu." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yaoshuhan.github.io/blog/20171114/" />
+
+
+
+<meta property="article:published_time" content="2017-11-14T03:36:57&#43;08:00"/>
+<meta property="article:modified_time" content="2017-11-14T03:36:57&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="初识golang—单例模式">
+<meta itemprop="description" content="单例模式是设计模式里最为常用的一种，应用该设计模式的目的是保证类仅有一个全局的对象实例。
+懒汉模式(Lazy Loading) 懒汉模式是最为简单常见的，最大的缺点是非线程安全的。
+type singleton struct { //... } //private var instance *singleton //public func GetInstance() *singleton { if instance == nil { instance = &amp;singleton{} } return instance }  带锁的单例模式 sync包提供两种锁类型：Mutex和RWMutex。Mutex是我们常见的锁类型，当一个goroutine获得Mutex之后，其它的goroutine只能进行等待直到该Mutex被释放。而RWMutex则是较为友好的单读多写模型，写锁会阻止其它所任何goroutine访问，而读锁则只会阻止写而不阻止读。
+这里使用了Go的sync.Mutex，解决了懒汉模式的线程安全问题，但是在已生成实例后每次访问还都会调用锁，造成不必要的开销。
+type singleton sturct { } var instance *singleton var mu sync.Mutex func GetInstance() *singleton { mu.Lock() defer mu.Unlock() if instance == nil { instance = &amp;singleton{} } return instance }  带检查锁的单例模式 通过再封加一层判断，可以解决不必要开销的问题。
+if instance == nil { mu.">
+
+
+<meta itemprop="dateModified" content="2017-11-14T03:36:57&#43;08:00" />
+<meta itemprop="wordCount" content="151">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="https://yaoshuhan.github.io/css/main.css">
+            <link rel="stylesheet" href="https://yaoshuhan.github.io/css/add-on.css">
+        
+
+        
+
+        
+            
+        
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="https://yaoshuhan.github.io">blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>首页
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>博客
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/photo/">
+                            <i class="fa fa-image-o">&nbsp;</i>摄影
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="https://yaoshuhan.github.io">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="https://yaoshuhan.github.io">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>首页
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>博客
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/photo/">
+                            <h3>
+                                <i class="fa fa-image-o">&nbsp;</i>摄影
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://yaoshuhan.github.io/blog/20171116/">MongoDB-基础</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2017-11-16'>
+                                    November 16, 2017</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://yaoshuhan.github.io/blog/20171114/">初识golang—单例模式</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2017-11-14'>
+                                    November 14, 2017</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://yaoshuhan.github.io/blog/20171108/">初识golang—并发基础</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2017-11-08'>
+                                    November 8, 2017</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://yaoshuhan.github.io/blog/20170713/">更新OSX的Ruby版本</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2017-07-13'>
+                                    July 13, 2017</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://yaoshuhan.github.io/photo/second/">Second</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2017-07-13'>
+                                    July 13, 2017</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            "/post/"
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20171114%2f&text=%e5%88%9d%e8%af%86golang%08%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+<li>
+  <a href="//plus.google.com/share?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20171114%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20171114%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+<li>
+  <a href="//reddit.com/submit?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20171114%2f&title=%e5%88%9d%e8%af%86golang%08%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20171114%2f&title=%e5%88%9d%e8%af%86golang%08%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20171114%2f&title=%e5%88%9d%e8%af%86golang%08%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20171114%2f&description=%e5%88%9d%e8%af%86golang%08%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20171114%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="https://yaoshuhan.github.io/blog/20171114/">初识golang—单例模式</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2017-11-14'>
+            November 14, 2017</time>
+        <span class="author"></span>
+        
+        
+    </div>
+</header>
+
+
+  
+
+  
+
+  <div id="content">
+    
+
+<p>单例模式是设计模式里最为常用的一种，应用该设计模式的目的是保证类仅有一个全局的对象实例。</p>
+
+<h2 id="懒汉模式-lazy-loading">懒汉模式(Lazy Loading)</h2>
+
+<p>懒汉模式是最为简单常见的，最大的缺点是非线程安全的。</p>
+
+<pre><code>type singleton struct {
+    //...
+}
+//private
+var instance *singleton
+//public
+func GetInstance() *singleton {
+    if instance == nil {
+        instance = &amp;singleton{}
+    }
+    return instance
+}
+</code></pre>
+
+<h2 id="带锁的单例模式">带锁的单例模式</h2>
+
+<p>sync包提供两种锁类型：Mutex和RWMutex。Mutex是我们常见的锁类型，当一个goroutine获得Mutex之后，其它的goroutine只能进行等待直到该Mutex被释放。而RWMutex则是较为友好的单读多写模型，写锁会阻止其它所任何goroutine访问，而读锁则只会阻止写而不阻止读。</p>
+
+<p>这里使用了Go的sync.Mutex，解决了懒汉模式的线程安全问题，但是在已生成实例后每次访问还都会调用锁，造成不必要的开销。</p>
+
+<pre><code>type singleton sturct {
+}
+
+var instance *singleton
+var mu sync.Mutex
+
+func GetInstance() *singleton {
+    mu.Lock()
+    defer mu.Unlock()
+
+    if instance == nil {
+        instance = &amp;singleton{}
+    }
+    return instance
+}
+</code></pre>
+
+<h2 id="带检查锁的单例模式">带检查锁的单例模式</h2>
+
+<p>通过再封加一层判断，可以解决不必要开销的问题。</p>
+
+<pre><code>if instance == nil {
+    mu.Lock()
+    defer mu.Unlock()
+
+    if instance == nil {
+        instance = &amp;singleton{}
+    }
+    return instance
+}
+</code></pre>
+
+<p>通过sync/atomic包中的原子操作，还可以写成</p>
+
+<pre><code>import &quot;sync&quot;
+import &quot;sync/atomic&quot;
+
+var initialized uint32
+...
+func GetInstance() *singleton {
+
+    if atomic.LoadUInt32(&amp;initialized) ==1 {
+        return instance
+    }
+
+    mu.Lock()
+    defer mu.Unlock()
+
+    if initialized == 0 {
+        instance = &amp;singleton{}
+        atomic.StoreUint32(&amp;initialized, 1)
+    }
+
+    return instance
+}
+</code></pre>
+
+<h2 id="sync-once">sync.Once</h2>
+
+<p>Go语言中提供了一个sync.Once类型解决全局唯一性操作问题，Once.Do()方法可以保证全局范围内只调用指定的函数一次，而且其他goroutine调用到该语句时都将被阻塞，直到全局唯一的Once.Do()被调用后才执行。</p>
+
+<pre><code>import &quot;sync&quot;
+
+type singleton struct {
+}
+
+var instance *singleton
+var once sync.Once
+
+func GetInstance() *singleton {
+    once.Do(func() {
+        instance = &amp;singleton{}
+    })
+    return instance
+}
+</code></pre>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/development'>Development</a></li>
+    
+        <li><a href='/categories/golang'>Golang</a></li>
+    
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="https://yaoshuhan.github.io/blog/20171108/"
+                class="button big previous">初识golang—并发基础</a></li>
+    
+
+    
+        <li><a href="https://yaoshuhan.github.io/blog/20171116/"
+                class="button big next">MongoDB-基础</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/' class="logo"><img src="/img/avatar.png" alt="" /></a>
+      
+    
+    
+      <header>
+        <h2>Shuhan_Yao</h2>
+        <p>~Winner Winner Chicken Dinner~</p>
+      </header>
+    
+    
+  </section>
+
+  
+  <section id="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://yaoshuhan.github.io/blog/20171116/">MongoDB-基础</a>
+              </h3>
+              
+              <time class="published" datetime='2017-11-16'>
+                November 16, 2017
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://yaoshuhan.github.io/blog/20171114/">初识golang—单例模式</a>
+              </h3>
+              
+              <time class="published" datetime='2017-11-14'>
+                November 14, 2017
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://yaoshuhan.github.io/blog/20171108/">初识golang—并发基础</a>
+              </h3>
+              
+              <time class="published" datetime='2017-11-08'>
+                November 8, 2017
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://yaoshuhan.github.io/blog/20170713/">更新OSX的Ruby版本</a>
+              </h3>
+              
+              <time class="published" datetime='2017-07-13'>
+                July 13, 2017
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://yaoshuhan.github.io/photo/second/">Second</a>
+              </h3>
+              
+              <time class="published" datetime='2017-07-13'>
+                July 13, 2017
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            "/post/"
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/development/">development</a>
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/golang/">golang</a>
+                <span style="float:right;">5</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/mongodb/">mongodb</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+
+  
+  
+
+  
+  <section id="footer">
+    
+    <p class="copyright">
+      
+        &copy; 2017
+        
+          Shuhan_Yao.Blog
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="https://yaoshuhan.github.io/js/util.js"></script>
+      <script src="https://yaoshuhan.github.io/js/main.js"></script>
+      <script src="https://yaoshuhan.github.io/js/backToTop.js"></script>
+    
+
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

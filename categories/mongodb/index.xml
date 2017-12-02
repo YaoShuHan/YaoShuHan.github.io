@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongodb on Shuhan_Yao.Blog</title>
+    <link>https://yaoshuhan.github.io/categories/mongodb/</link>
+    <description>Recent content in Mongodb on Shuhan_Yao.Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Nov 2017 13:47:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://yaoshuhan.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MongoDB-基础</title>
+      <link>https://yaoshuhan.github.io/blog/20171116/</link>
+      <pubDate>Thu, 16 Nov 2017 13:47:14 +0800</pubDate>
+      
+      <guid>https://yaoshuhan.github.io/blog/20171116/</guid>
+      <description>什么是MonogoDB MongoDB是由C++编写的，基于分布式文件存储的开源非关系型数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。MongoDB将数据存储为一个文档，数据结构由键值对组成，其形式类似于JSON对象，字段值可以包含其它文档，数组和文档数组。
+{ title: &amp;quot;MongoDB-基础&amp;quot;, trags: [&amp;quot;MongoDB&amp;quot;,&amp;quot;NoSQL&amp;quot;] }  NoSQL简介 NoSQL指的是非关系型的数据看。NoSQL有时也称作Not Only SQL的缩写，是对不同于传统的关系型数据库的数据库管理系统的统称，用于超大规模数据的存储。
+NoSQL
+ 高性能、高可用性、可伸缩性 分布式计算 低成本 架构灵活，半结构化数据（键值对存储，列存储，文档存储，图形数据库） 最终一致性，而非ACID属性 CAP定理  NoSQL数据库分类
+   类型 部分代表 特点     列存储 Hbase Cassandra Hypertable 顾名思义，是按列存储数据的。最大的特点是方便存储结构化和半结构化数据，方便做数据压缩，对针对某一列或者某几列的查询有非常大的IO优势。   文档存储 MongoDB CouchDB 文档存储一般用类似json的格式存储，存储的内容是文档型的。这样也就有有机会对某些字段建立索引，实现关系数据库的某些功能。   Key-Value存储 Tokyo Cabinet/Tyrant BerkeleyDB MemecacheDB Redis 可以通过key快速查询到其value。一般来说，存储不管value的格式，照单全收。（Redis包含了其他功能）   图存储 Neo4J FlockDB 图形关系的最佳存储。使用传统关系数据库来解决的话性能低下，而且设计使用不方便。   对象存储 db4o Versant 通过类似面向对象语言的语法操作数据库，通过对象的方式存取数据。   xml数据库 BerkeleyDBXML BaseX 高效的存储XML数据，并支持XML的内部查询语法，比如XQuery,Xpath。    MongoDB主要特点  MongoDB面向文档存储，操作起来比较简单和容易。 MongoDB可以设置任何属性的索引来实现更快的排序。 可以通过本地或者网络创建数据镜像，使得MongoDB有更强的扩展性。 如果负载的增加需要更多的存储空间和更强的处理能力，它可以分布在计算机网络中的其他节点上，即分片。 MongoDB支持丰富的查询表达式，查询指令使用JSON形式的标记。 MongoDB中内置GridFS，可以用于存放大量小文件。 MongoDB允许在服务端执行脚本 支持多平台及多语言驱动  ACID</description>
+    </item>
+    
+  </channel>
+</rss>
