@@ -13,16 +13,25 @@
     <item>
       <title>Development</title>
       <link>https://yaoshuhan.github.io/categories/development/</link>
-      <pubDate>Thu, 16 Nov 2017 13:47:14 +0800</pubDate>
+      <pubDate>Sat, 16 Sep 2017 13:47:14 +0800</pubDate>
       
       <guid>https://yaoshuhan.github.io/categories/development/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Git</title>
+      <link>https://yaoshuhan.github.io/categories/git/</link>
+      <pubDate>Wed, 30 Aug 2017 16:19:13 +0800</pubDate>
+      
+      <guid>https://yaoshuhan.github.io/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Golang</title>
       <link>https://yaoshuhan.github.io/categories/golang/</link>
-      <pubDate>Thu, 16 Nov 2017 13:47:14 +0800</pubDate>
+      <pubDate>Sat, 16 Sep 2017 13:47:14 +0800</pubDate>
       
       <guid>https://yaoshuhan.github.io/categories/golang/</guid>
       <description></description>
@@ -31,7 +40,7 @@
     <item>
       <title>Mongodb</title>
       <link>https://yaoshuhan.github.io/categories/mongodb/</link>
-      <pubDate>Thu, 16 Nov 2017 13:47:14 +0800</pubDate>
+      <pubDate>Sat, 16 Sep 2017 13:47:14 +0800</pubDate>
       
       <guid>https://yaoshuhan.github.io/categories/mongodb/</guid>
       <description></description>
