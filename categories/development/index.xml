@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on Shuhan_Yao.Blog</title>
-    <link>http://github.com/YaoShuHan/YaoShuHan.github.io/categories/development/</link>
+    <link>https://github.com/YaoShuHan/YaoShuHan.github.io/categories/development/</link>
     <description>Recent content in Development on Shuhan_Yao.Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 Sep 2017 13:47:14 +0800</lastBuildDate>
     
-	<atom:link href="http://github.com/YaoShuHan/YaoShuHan.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://github.com/YaoShuHan/YaoShuHan.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>MongoDB-基础</title>
-      <link>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/mongodb-%E5%9F%BA%E7%A1%80/</link>
+      <link>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170916_mongodb/</link>
       <pubDate>Sat, 16 Sep 2017 13:47:14 +0800</pubDate>
       
-      <guid>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/mongodb-%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170916_mongodb/</guid>
       <description>什么是MonogoDB MongoDB是由C++编写的，基于分布式文件存储的开源非关系型数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。MongoDB将数据存储为一个文档，数据结构由键值对组成，其形式类似于JSON对象，字段值可以包含其它文档，数组和文档数组。
 { title: &amp;quot;MongoDB-基础&amp;quot;, trags: [&amp;quot;MongoDB&amp;quot;,&amp;quot;NoSQL&amp;quot;] }  NoSQL简介 NoSQL指的是非关系型的数据看。NoSQL有时也称作Not Only SQL的缩写，是对不同于传统的关系型数据库的数据库管理系统的统称，用于超大规模数据的存储。
 NoSQL
@@ -26,10 +26,10 @@ NoSQL
     
     <item>
       <title>初识golang—单例模式</title>
-      <link>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/%E5%88%9D%E8%AF%86golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170916_singleton_pattern/</link>
       <pubDate>Sat, 16 Sep 2017 11:36:57 +0800</pubDate>
       
-      <guid>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/%E5%88%9D%E8%AF%86golang%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170916_singleton_pattern/</guid>
       <description>单例模式是设计模式里最为常用的一种，应用该设计模式的目的是保证类仅有一个全局的对象实例。
 懒汉模式(Lazy Loading) 懒汉模式是最为简单常见的，最大的缺点是非线程安全的。
 type singleton struct { //... } //private var instance *singleton //public func GetInstance() *singleton { if instance == nil { instance = &amp;amp;singleton{} } return instance }  带锁的单例模式 sync包提供两种锁类型：Mutex和RWMutex。Mutex是我们常见的锁类型，当一个goroutine获得Mutex之后，其它的goroutine只能进行等待直到该Mutex被释放。而RWMutex则是较为友好的单读多写模型，写锁会阻止其它所任何goroutine访问，而读锁则只会阻止写而不阻止读。
@@ -40,10 +40,10 @@ if instance == nil { mu.</description>
     
     <item>
       <title>更新OSX的Ruby版本</title>
-      <link>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/%E6%9B%B4%E6%96%B0osx%E7%9A%84ruby%E7%89%88%E6%9C%AC/</link>
+      <link>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170909_ruby/</link>
       <pubDate>Sat, 09 Sep 2017 11:22:16 +0800</pubDate>
       
-      <guid>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/%E6%9B%B4%E6%96%B0osx%E7%9A%84ruby%E7%89%88%E6%9C%AC/</guid>
+      <guid>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170909_ruby/</guid>
       <description> 在使用Homebrew安装工具时，返回了Ruby版本过低的RuntimeError。OSX是系统自带Ruby的，可以通过RVM(Ruby Version Manager)对其进行更新，RVM包含了Ruby的版本管理和Gem库管理(Gemset)。
 安装RVM 1.下载安装RVM
 $ curl -L get.rvm.io | bash -s stable  2.更新配置文件
@@ -56,10 +56,10 @@ $ rvm reinstall 2.3.4  问题汇总 </description>
     
     <item>
       <title>初识golang—并发基础</title>
-      <link>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/%E5%88%9D%E8%AF%86golang%E5%B9%B6%E5%8F%91%E5%9F%BA%E7%A1%80/</link>
+      <link>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170908_golang/</link>
       <pubDate>Fri, 08 Sep 2017 20:51:36 +0800</pubDate>
       
-      <guid>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/%E5%88%9D%E8%AF%86golang%E5%B9%B6%E5%8F%91%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170908_golang/</guid>
       <description>Golang是一个并发性极好的语言，通过goroutine和channel相配合，可以帮助我们轻松实现高并发服务端程序。
 goroutine 相比于其它大部分语言通过库的方式支持协程，Go在语言级别支持协程，goroutine是Golang中对协程的实现，由Go的runtime管理。与传统的系统级进程和线程相比，协程最大的优势在于其“轻量级”，可以轻松创建上百万个而不必当心系统资源衰竭。 在Go中创建goroutine很简单，通过在函数调用前加上go关键字即可“ go func(&amp;hellip;) ”，在函数返回时这个goroutine也自动结束了，函数的返回值会被自动丢弃。
 func loop(x int) { for i:=0; i &amp;lt; x; i++ fmt.Println(x) } func main(){ go loop(x) }  上面这段代码展示了go关键字的使用，但是会发现没有预期的运行效果。因为在goroutine并发执行时，主函数已经返回，它并不会等待goroutine的结束。 通过对主程序添加等待函数之类的阻塞主函数的结束来等待所有的协程执行完毕即可解决，但这种方式显然不够优雅。要如何知道goroutine都退出了又能阻塞主函数的结束呢？channel就是我们要找的答案。
@@ -72,10 +72,10 @@ var ch chan string = make(chan string, 0) func loop(x int) { for i := 0; i &amp;
     
     <item>
       <title>git版本控制</title>
-      <link>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</link>
+      <link>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170830_git/</link>
       <pubDate>Wed, 30 Aug 2017 16:19:13 +0800</pubDate>
       
-      <guid>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</guid>
+      <guid>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170830_git/</guid>
       <description>Git简介 Git是一款免费、开源的分布式版本控制系统。
 Linus在1991年创建了Linux内核开源项目，有着来自全世界的贡献者参与该项目，使其不断壮大发展。在早期(1991-2002)，绝大多数的Linux内核维护工作是由Linus本人通过手工方式进行合并与归档。直到2002年，随着代码库的逐渐壮大，Linus最终选择了启用BitMover的分布式版本控制系统BitKeeper，BitMover授权Linux社区免费使用。
 到了2005年，由于社区内存在试图破解BitKeeper的协议被发现，所以BitMover收回了免费授权。于是，Linus Torvalds花了两周时间用C写了一个分布式版本控制系统&amp;ndash;Git，一个月内Linux社区的源码就由Git管理了，Git也迅速成为最流行的分布式版本控制系统！
