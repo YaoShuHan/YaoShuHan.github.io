@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Shuhan_Yao.Blog</title>
-    <link>https://github.com/YaoShuHan/YaoShuHan.github.io/categories/git/</link>
+    <link>http://github.com/YaoShuHan/YaoShuHan.github.io/categories/git/</link>
     <description>Recent content in Git on Shuhan_Yao.Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Aug 2017 16:19:13 +0800</lastBuildDate>
     
-	<atom:link href="https://github.com/YaoShuHan/YaoShuHan.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://github.com/YaoShuHan/YaoShuHan.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>git版本控制</title>
-      <link>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</link>
+      <link>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</link>
       <pubDate>Wed, 30 Aug 2017 16:19:13 +0800</pubDate>
       
-      <guid>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</guid>
+      <guid>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</guid>
       <description>Git简介 Git是一款免费、开源的分布式版本控制系统。
 Linus在1991年创建了Linux内核开源项目，有着来自全世界的贡献者参与该项目，使其不断壮大发展。在早期(1991-2002)，绝大多数的Linux内核维护工作是由Linus本人通过手工方式进行合并与归档。直到2002年，随着代码库的逐渐壮大，Linus最终选择了启用BitMover的分布式版本控制系统BitKeeper，BitMover授权Linux社区免费使用。
 到了2005年，由于社区内存在试图破解BitKeeper的协议被发现，所以BitMover收回了免费授权。于是，Linus Torvalds花了两周时间用C写了一个分布式版本控制系统&amp;ndash;Git，一个月内Linux社区的源码就由Git管理了，Git也迅速成为最流行的分布式版本控制系统！

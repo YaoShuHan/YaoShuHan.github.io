@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photos on Shuhan_Yao.Blog</title>
-    <link>https://github.com/YaoShuHan/YaoShuHan.github.io/photo/</link>
+    <link>http://github.com/YaoShuHan/YaoShuHan.github.io/photo/</link>
     <description>Recent content in Photos on Shuhan_Yao.Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Jul 2017 11:22:16 +0800</lastBuildDate>
     
-	<atom:link href="https://github.com/YaoShuHan/YaoShuHan.github.io/photo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://github.com/YaoShuHan/YaoShuHan.github.io/photo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Second</title>
-      <link>https://github.com/YaoShuHan/YaoShuHan.github.io/photo/second/</link>
+      <link>http://github.com/YaoShuHan/YaoShuHan.github.io/photo/second/</link>
       <pubDate>Thu, 13 Jul 2017 11:22:16 +0800</pubDate>
       
-      <guid>https://github.com/YaoShuHan/YaoShuHan.github.io/photo/second/</guid>
+      <guid>http://github.com/YaoShuHan/YaoShuHan.github.io/photo/second/</guid>
       <description></description>
     </item>
     

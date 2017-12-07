@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mongodb on Shuhan_Yao.Blog</title>
-    <link>https://github.com/YaoShuHan/YaoShuHan.github.io/categories/mongodb/</link>
+    <link>http://github.com/YaoShuHan/YaoShuHan.github.io/categories/mongodb/</link>
     <description>Recent content in Mongodb on Shuhan_Yao.Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 Sep 2017 13:47:14 +0800</lastBuildDate>
     
-	<atom:link href="https://github.com/YaoShuHan/YaoShuHan.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://github.com/YaoShuHan/YaoShuHan.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>MongoDB-基础</title>
-      <link>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/mongodb-%E5%9F%BA%E7%A1%80/</link>
+      <link>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/mongodb-%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Sat, 16 Sep 2017 13:47:14 +0800</pubDate>
       
-      <guid>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/mongodb-%E5%9F%BA%E7%A1%80/</guid>
+      <guid>http://github.com/YaoShuHan/YaoShuHan.github.io/blog/mongodb-%E5%9F%BA%E7%A1%80/</guid>
       <description>什么是MonogoDB MongoDB是由C++编写的，基于分布式文件存储的开源非关系型数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。MongoDB将数据存储为一个文档，数据结构由键值对组成，其形式类似于JSON对象，字段值可以包含其它文档，数组和文档数组。
 { title: &amp;quot;MongoDB-基础&amp;quot;, trags: [&amp;quot;MongoDB&amp;quot;,&amp;quot;NoSQL&amp;quot;] }  NoSQL简介 NoSQL指的是非关系型的数据看。NoSQL有时也称作Not Only SQL的缩写，是对不同于传统的关系型数据库的数据库管理系统的统称，用于超大规模数据的存储。
 NoSQL
