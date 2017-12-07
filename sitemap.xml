@@ -3,21 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20171116/</loc>
-    <lastmod>2017-11-16T13:47:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20171114/</loc>
-    <lastmod>2017-11-14T03:36:57+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20171108/</loc>
-    <lastmod>2017-11-08T20:51:36+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/mongodb-%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2017-09-16T13:47:14+08:00</lastmod>
   </url>
@@ -43,18 +28,13 @@
   </url>
   
   <url>
-    <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/20170713/</loc>
-    <lastmod>2017-07-13T11:22:16+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/photo/second/</loc>
     <lastmod>2017-07-13T11:22:16+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/blog/</loc>
-    <lastmod>2017-11-16T13:47:14+08:00</lastmod>
+    <lastmod>2017-09-16T13:47:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -65,7 +45,7 @@
   
   <url>
     <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/categories/development/</loc>
-    <lastmod>2017-11-16T13:47:14+08:00</lastmod>
+    <lastmod>2017-09-16T13:47:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -77,13 +57,13 @@
   
   <url>
     <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/categories/golang/</loc>
-    <lastmod>2017-11-16T13:47:14+08:00</lastmod>
+    <lastmod>2017-09-16T13:47:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/categories/mongodb/</loc>
-    <lastmod>2017-11-16T13:47:14+08:00</lastmod>
+    <lastmod>2017-09-16T13:47:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -95,7 +75,7 @@
   
   <url>
     <loc>https://github.com/YaoShuHan/YaoShuHan.github.io/</loc>
-    <lastmod>2017-11-16T13:47:14+08:00</lastmod>
+    <lastmod>2017-09-16T13:47:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
