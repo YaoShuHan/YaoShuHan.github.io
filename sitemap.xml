@@ -3,84 +3,89 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://yaoshuhan.github.io/blog/20170916_mongodb/</loc>
+    <loc>https://YaoShuHan.github.io/blog/20170923_golang_defer/</loc>
+    <lastmod>2017-09-23T16:25:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://YaoShuHan.github.io/blog/20170916_mongodb/</loc>
     <lastmod>2017-09-16T13:47:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/blog/20170916_singleton_pattern/</loc>
+    <loc>https://YaoShuHan.github.io/blog/20170916_singleton_pattern/</loc>
     <lastmod>2017-09-16T11:36:57+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/blog/20170909_ruby/</loc>
+    <loc>https://YaoShuHan.github.io/blog/20170909_ruby/</loc>
     <lastmod>2017-09-09T11:22:16+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/blog/20170908_golang/</loc>
+    <loc>https://YaoShuHan.github.io/blog/20170908_golang/</loc>
     <lastmod>2017-09-08T20:51:36+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/blog/20170830_git/</loc>
+    <loc>https://YaoShuHan.github.io/blog/20170830_git/</loc>
     <lastmod>2017-08-30T16:19:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/photo/second/</loc>
+    <loc>https://YaoShuHan.github.io/photo/second/</loc>
     <lastmod>2017-07-13T11:22:16+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/blog/</loc>
-    <lastmod>2017-09-16T13:47:14+08:00</lastmod>
+    <loc>https://YaoShuHan.github.io/blog/</loc>
+    <lastmod>2017-09-23T16:25:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/categories/</loc>
+    <loc>https://YaoShuHan.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/categories/development/</loc>
-    <lastmod>2017-09-16T13:47:14+08:00</lastmod>
+    <loc>https://YaoShuHan.github.io/categories/development/</loc>
+    <lastmod>2017-09-23T16:25:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/categories/git/</loc>
+    <loc>https://YaoShuHan.github.io/categories/git/</loc>
     <lastmod>2017-08-30T16:19:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/categories/golang/</loc>
+    <loc>https://YaoShuHan.github.io/categories/golang/</loc>
+    <lastmod>2017-09-23T16:25:10+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://YaoShuHan.github.io/categories/mongodb/</loc>
     <lastmod>2017-09-16T13:47:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/categories/mongodb/</loc>
-    <lastmod>2017-09-16T13:47:14+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://yaoshuhan.github.io/photo/</loc>
+    <loc>https://YaoShuHan.github.io/photo/</loc>
     <lastmod>2017-07-13T11:22:16+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/</loc>
-    <lastmod>2017-09-16T13:47:14+08:00</lastmod>
+    <loc>https://YaoShuHan.github.io/</loc>
+    <lastmod>2017-09-23T16:25:10+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://yaoshuhan.github.io/tags/</loc>
+    <loc>https://YaoShuHan.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   

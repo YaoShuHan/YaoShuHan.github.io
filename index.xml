@@ -2,21 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shuhan_Yao.Blog</title>
-    <link>https://yaoshuhan.github.io/</link>
+    <link>https://YaoShuHan.github.io/</link>
     <description>Recent content on Shuhan_Yao.Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Sep 2017 13:47:14 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Sep 2017 16:25:10 +0800</lastBuildDate>
     
-	<atom:link href="https://yaoshuhan.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://YaoShuHan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>初识Golang—defer</title>
+      <link>https://YaoShuHan.github.io/blog/20170923_golang_defer/</link>
+      <pubDate>Sat, 23 Sep 2017 16:25:10 +0800</pubDate>
+      
+      <guid>https://YaoShuHan.github.io/blog/20170923_golang_defer/</guid>
+      <description>本文参考自Andy&amp;rsquo;s Blog、golang的defer精析
+关键字defer是golang中一个实用且常见的特性，defer代码块会在函数调用链表中增加一个函数调用，它会在函数正常返回之前执行。因此，defer通常用来释放函数内部的对象资源。
+func CopyFile(dst, src string) (w int64, err error) { srcFile, err := os.Open(src) if err != nil { return } defer srcFile.Close() dstFile, err := os.Create(dstName) if err != nil { return } defer dstFile.Close() return io.Copy(dstFile, srcFile) }  通过defer,即使其中的Copy()函数抛出异常，Go仍然会保证dstFile和srcFile会被正常关闭。
+defer的使用规则 规则一 当defer被声明时，其参数会被实时解析 func example1() { i := 1 defer fmt.Println(&amp;quot;v1&amp;quot;, i) i = 2 defer fmt.Println(&amp;quot;v2&amp;quot;, i) i = 8 defer fmt.Println(&amp;quot;v3&amp;quot;, i) fmt.Println(&amp;quot;v4&amp;quot;, i) } // v4 8 // v3 8 // v2 2 // v1 1  在上面的例子中我们可以看出，虽然我们在defer后调用的是带变量的输出函数fmt.</description>
+    </item>
+    
+    <item>
       <title>MongoDB-基础</title>
-      <link>https://yaoshuhan.github.io/blog/20170916_mongodb/</link>
+      <link>https://YaoShuHan.github.io/blog/20170916_mongodb/</link>
       <pubDate>Sat, 16 Sep 2017 13:47:14 +0800</pubDate>
       
-      <guid>https://yaoshuhan.github.io/blog/20170916_mongodb/</guid>
+      <guid>https://YaoShuHan.github.io/blog/20170916_mongodb/</guid>
       <description>什么是MonogoDB MongoDB是由C++编写的，基于分布式文件存储的开源非关系型数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。MongoDB将数据存储为一个文档，数据结构由键值对组成，其形式类似于JSON对象，字段值可以包含其它文档，数组和文档数组。
 { title: &amp;quot;MongoDB-基础&amp;quot;, trags: [&amp;quot;MongoDB&amp;quot;,&amp;quot;NoSQL&amp;quot;] }  NoSQL简介 NoSQL指的是非关系型的数据看。NoSQL有时也称作Not Only SQL的缩写，是对不同于传统的关系型数据库的数据库管理系统的统称，用于超大规模数据的存储。
 NoSQL
@@ -26,10 +38,10 @@ NoSQL
     
     <item>
       <title>初识golang—单例模式</title>
-      <link>https://yaoshuhan.github.io/blog/20170916_singleton_pattern/</link>
+      <link>https://YaoShuHan.github.io/blog/20170916_singleton_pattern/</link>
       <pubDate>Sat, 16 Sep 2017 11:36:57 +0800</pubDate>
       
-      <guid>https://yaoshuhan.github.io/blog/20170916_singleton_pattern/</guid>
+      <guid>https://YaoShuHan.github.io/blog/20170916_singleton_pattern/</guid>
       <description>单例模式是设计模式里最为常用的一种，应用该设计模式的目的是保证类仅有一个全局的对象实例。
 懒汉模式(Lazy Loading) 懒汉模式是最为简单常见的，最大的缺点是非线程安全的。
 type singleton struct { //... } //private var instance *singleton //public func GetInstance() *singleton { if instance == nil { instance = &amp;amp;singleton{} } return instance }  带锁的单例模式 sync包提供两种锁类型：Mutex和RWMutex。Mutex是我们常见的锁类型，当一个goroutine获得Mutex之后，其它的goroutine只能进行等待直到该Mutex被释放。而RWMutex则是较为友好的单读多写模型，写锁会阻止其它所任何goroutine访问，而读锁则只会阻止写而不阻止读。
@@ -40,10 +52,10 @@ if instance == nil { mu.</description>
     
     <item>
       <title>更新OSX的Ruby版本</title>
-      <link>https://yaoshuhan.github.io/blog/20170909_ruby/</link>
+      <link>https://YaoShuHan.github.io/blog/20170909_ruby/</link>
       <pubDate>Sat, 09 Sep 2017 11:22:16 +0800</pubDate>
       
-      <guid>https://yaoshuhan.github.io/blog/20170909_ruby/</guid>
+      <guid>https://YaoShuHan.github.io/blog/20170909_ruby/</guid>
       <description> 在使用Homebrew安装工具时，返回了Ruby版本过低的RuntimeError。OSX是系统自带Ruby的，可以通过RVM(Ruby Version Manager)对其进行更新，RVM包含了Ruby的版本管理和Gem库管理(Gemset)。
 安装RVM 1.下载安装RVM
 $ curl -L get.rvm.io | bash -s stable  2.更新配置文件
@@ -56,10 +68,10 @@ $ rvm reinstall 2.3.4  问题汇总 </description>
     
     <item>
       <title>初识golang—并发基础</title>
-      <link>https://yaoshuhan.github.io/blog/20170908_golang/</link>
+      <link>https://YaoShuHan.github.io/blog/20170908_golang/</link>
       <pubDate>Fri, 08 Sep 2017 20:51:36 +0800</pubDate>
       
-      <guid>https://yaoshuhan.github.io/blog/20170908_golang/</guid>
+      <guid>https://YaoShuHan.github.io/blog/20170908_golang/</guid>
       <description>Golang是一个并发性极好的语言，通过goroutine和channel相配合，可以帮助我们轻松实现高并发服务端程序。
 goroutine 相比于其它大部分语言通过库的方式支持协程，Go在语言级别支持协程，goroutine是Golang中对协程的实现，由Go的runtime管理。与传统的系统级进程和线程相比，协程最大的优势在于其“轻量级”，可以轻松创建上百万个而不必当心系统资源衰竭。 在Go中创建goroutine很简单，通过在函数调用前加上go关键字即可“ go func(&amp;hellip;) ”，在函数返回时这个goroutine也自动结束了，函数的返回值会被自动丢弃。
 func loop(x int) { for i:=0; i &amp;lt; x; i++ fmt.Println(x) } func main(){ go loop(x) }  上面这段代码展示了go关键字的使用，但是会发现没有预期的运行效果。因为在goroutine并发执行时，主函数已经返回，它并不会等待goroutine的结束。 通过对主程序添加等待函数之类的阻塞主函数的结束来等待所有的协程执行完毕即可解决，但这种方式显然不够优雅。要如何知道goroutine都退出了又能阻塞主函数的结束呢？channel就是我们要找的答案。
@@ -72,10 +84,10 @@ var ch chan string = make(chan string, 0) func loop(x int) { for i := 0; i &amp;
     
     <item>
       <title>git版本控制</title>
-      <link>https://yaoshuhan.github.io/blog/20170830_git/</link>
+      <link>https://YaoShuHan.github.io/blog/20170830_git/</link>
       <pubDate>Wed, 30 Aug 2017 16:19:13 +0800</pubDate>
       
-      <guid>https://yaoshuhan.github.io/blog/20170830_git/</guid>
+      <guid>https://YaoShuHan.github.io/blog/20170830_git/</guid>
       <description>Git简介 Git是一款免费、开源的分布式版本控制系统。
 Linus在1991年创建了Linux内核开源项目，有着来自全世界的贡献者参与该项目，使其不断壮大发展。在早期(1991-2002)，绝大多数的Linux内核维护工作是由Linus本人通过手工方式进行合并与归档。直到2002年，随着代码库的逐渐壮大，Linus最终选择了启用BitMover的分布式版本控制系统BitKeeper，BitMover授权Linux社区免费使用。
 到了2005年，由于社区内存在试图破解BitKeeper的协议被发现，所以BitMover收回了免费授权。于是，Linus Torvalds花了两周时间用C写了一个分布式版本控制系统&amp;ndash;Git，一个月内Linux社区的源码就由Git管理了，Git也迅速成为最流行的分布式版本控制系统！
@@ -97,10 +109,10 @@ Git操作 配置Git # 配置用户名与邮箱 $ git config --global user.name &
     
     <item>
       <title>Second</title>
-      <link>https://yaoshuhan.github.io/photo/second/</link>
+      <link>https://YaoShuHan.github.io/photo/second/</link>
       <pubDate>Thu, 13 Jul 2017 11:22:16 +0800</pubDate>
       
-      <guid>https://yaoshuhan.github.io/photo/second/</guid>
+      <guid>https://YaoShuHan.github.io/photo/second/</guid>
       <description></description>
     </item>
     

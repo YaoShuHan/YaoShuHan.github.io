@@ -35,7 +35,7 @@ type singleton struct { //... } //private var instance *singleton //public func 
 type singleton sturct { } var instance *singleton var mu sync.Mutex func GetInstance() *singleton { mu.Lock() defer mu.Unlock() if instance == nil { instance = &amp;singleton{} } return instance }  带检查锁的单例模式 通过再封加一层判断，可以解决不必要开销的问题。
 if instance == nil { mu." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://yaoshuhan.github.io/blog/20170916_singleton_pattern/" />
+<meta property="og:url" content="https://YaoShuHan.github.io/blog/20170916_singleton_pattern/" />
 
 
 
@@ -81,8 +81,8 @@ if instance == nil { mu.">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
-            <link rel="stylesheet" href="https://yaoshuhan.github.io/css/main.css">
-            <link rel="stylesheet" href="https://yaoshuhan.github.io/css/add-on.css">
+            <link rel="stylesheet" href="https://YaoShuHan.github.io/css/main.css">
+            <link rel="stylesheet" href="https://YaoShuHan.github.io/css/add-on.css">
         
 
         
@@ -100,7 +100,7 @@ if instance == nil { mu.">
     
 <header id="header">
     
-      <h1><a href="https://yaoshuhan.github.io/">blog</a></h1>
+      <h1><a href="https://YaoShuHan.github.io/">blog</a></h1>
     
 
     <nav class="links">
@@ -137,7 +137,7 @@ if instance == nil { mu.">
                 <a class="fa-search" href="#search">Search</a>
                 <form id="search" method="get" action="//google.com/search">
                     <input type="text" name="q" placeholder="Search" />
-                    <input type="hidden" name="as_sitesearch" value="https://yaoshuhan.github.io/">
+                    <input type="hidden" name="as_sitesearch" value="https://YaoShuHan.github.io/">
                 </form>
             </li>
             <li class="menu">
@@ -154,7 +154,7 @@ if instance == nil { mu.">
         <section>
             <form class="search" method="get" action="//google.com/search">
                 <input type="text" name="q" placeholder="Search" />
-                <input type="hidden" name="as_sitesearch" value="https://yaoshuhan.github.io/">
+                <input type="hidden" name="as_sitesearch" value="https://YaoShuHan.github.io/">
             </form>
         </section>
 
@@ -204,7 +204,19 @@ if instance == nil { mu.">
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://yaoshuhan.github.io/blog/20170916_mongodb/">MongoDB-基础</a></h3>
+                                <h3><a href="https://YaoShuHan.github.io/blog/20170923_golang_defer/">初识Golang—defer</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2017-09-23'>
+                                    September 23, 2017</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="https://YaoShuHan.github.io/blog/20170916_mongodb/">MongoDB-基础</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-09-16'>
@@ -216,7 +228,7 @@ if instance == nil { mu.">
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://yaoshuhan.github.io/blog/20170916_singleton_pattern/">初识golang—单例模式</a></h3>
+                                <h3><a href="https://YaoShuHan.github.io/blog/20170916_singleton_pattern/">初识golang—单例模式</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-09-16'>
@@ -228,7 +240,7 @@ if instance == nil { mu.">
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://yaoshuhan.github.io/blog/20170909_ruby/">更新OSX的Ruby版本</a></h3>
+                                <h3><a href="https://YaoShuHan.github.io/blog/20170909_ruby/">更新OSX的Ruby版本</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-09-09'>
@@ -240,23 +252,11 @@ if instance == nil { mu.">
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="https://yaoshuhan.github.io/blog/20170908_golang/">初识golang—并发基础</a></h3>
+                                <h3><a href="https://YaoShuHan.github.io/blog/20170908_golang/">初识golang—并发基础</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-09-08'>
                                     September 8, 2017</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="https://yaoshuhan.github.io/blog/20170830_git/">git版本控制</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2017-08-30'>
-                                    August 30, 2017</time>
                             </header>
                             
 
@@ -287,7 +287,7 @@ if instance == nil { mu.">
 
 
 <li>
-  <a href="//twitter.com/share?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20170916_singleton_pattern%2f&text=%e5%88%9d%e8%af%86golang%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f&via=" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=https%3a%2f%2fYaoShuHan.github.io%2fblog%2f20170916_singleton_pattern%2f&text=%e5%88%9d%e8%af%86golang%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f&via=" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -295,7 +295,7 @@ if instance == nil { mu.">
 
 
 <li>
-  <a href="//plus.google.com/share?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20170916_singleton_pattern%2f" target="_blank" class="share-btn google-plus">
+  <a href="//plus.google.com/share?url=https%3a%2f%2fYaoShuHan.github.io%2fblog%2f20170916_singleton_pattern%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
   </a>
@@ -303,7 +303,7 @@ if instance == nil { mu.">
 
 
 <li>
-  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20170916_singleton_pattern%2f" target="_blank" class="share-btn facebook">
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fYaoShuHan.github.io%2fblog%2f20170916_singleton_pattern%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
     </a>
@@ -311,7 +311,7 @@ if instance == nil { mu.">
 
 
 <li>
-  <a href="//reddit.com/submit?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20170916_singleton_pattern%2f&title=%e5%88%9d%e8%af%86golang%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn reddit">
+  <a href="//reddit.com/submit?url=https%3a%2f%2fYaoShuHan.github.io%2fblog%2f20170916_singleton_pattern%2f&title=%e5%88%9d%e8%af%86golang%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
   </a>
@@ -319,7 +319,7 @@ if instance == nil { mu.">
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20170916_singleton_pattern%2f&title=%e5%88%9d%e8%af%86golang%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fYaoShuHan.github.io%2fblog%2f20170916_singleton_pattern%2f&title=%e5%88%9d%e8%af%86golang%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -327,7 +327,7 @@ if instance == nil { mu.">
 
 
 <li>
-  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20170916_singleton_pattern%2f&title=%e5%88%9d%e8%af%86golang%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn stumbleupon">
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fYaoShuHan.github.io%2fblog%2f20170916_singleton_pattern%2f&title=%e5%88%9d%e8%af%86golang%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
   </a>
@@ -335,7 +335,7 @@ if instance == nil { mu.">
 
 
 <li>
-  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20170916_singleton_pattern%2f&description=%e5%88%9d%e8%af%86golang%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn pinterest">
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fYaoShuHan.github.io%2fblog%2f20170916_singleton_pattern%2f&description=%e5%88%9d%e8%af%86golang%e2%80%94%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" target="_blank" class="share-btn pinterest">
     <i class="fa fa-pinterest-p"></i>
     <p>Pinterest</p>
   </a>
@@ -343,7 +343,7 @@ if instance == nil { mu.">
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fyaoshuhan.github.io%2fblog%2f20170916_singleton_pattern%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fYaoShuHan.github.io%2fblog%2f20170916_singleton_pattern%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -361,7 +361,7 @@ if instance == nil { mu.">
   <header>
     <div class="title">
         
-            <h1><a href="https://yaoshuhan.github.io/blog/20170916_singleton_pattern/">初识golang—单例模式</a></h1>
+            <h1><a href="https://YaoShuHan.github.io/blog/20170916_singleton_pattern/">初识golang—单例模式</a></h1>
             
         
         
@@ -526,12 +526,12 @@ func GetInstance() *singleton {
 
 <ul class="actions pagination">
     
-        <li><a href="https://yaoshuhan.github.io/blog/20170909_ruby/"
+        <li><a href="https://YaoShuHan.github.io/blog/20170909_ruby/"
                 class="button big previous">更新OSX的Ruby版本</a></li>
     
 
     
-        <li><a href="https://yaoshuhan.github.io/blog/20170916_mongodb/"
+        <li><a href="https://YaoShuHan.github.io/blog/20170916_mongodb/"
                 class="button big next">MongoDB-基础</a></li>
     
 </ul>
@@ -575,7 +575,21 @@ func GetInstance() *singleton {
           <article class="mini-post">
             <header>
               <h3>
-                <a href="https://yaoshuhan.github.io/blog/20170916_mongodb/">MongoDB-基础</a>
+                <a href="https://YaoShuHan.github.io/blog/20170923_golang_defer/">初识Golang—defer</a>
+              </h3>
+              
+              <time class="published" datetime='2017-09-23'>
+                September 23, 2017
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="https://YaoShuHan.github.io/blog/20170916_mongodb/">MongoDB-基础</a>
               </h3>
               
               <time class="published" datetime='2017-09-16'>
@@ -589,7 +603,7 @@ func GetInstance() *singleton {
           <article class="mini-post">
             <header>
               <h3>
-                <a href="https://yaoshuhan.github.io/blog/20170916_singleton_pattern/">初识golang—单例模式</a>
+                <a href="https://YaoShuHan.github.io/blog/20170916_singleton_pattern/">初识golang—单例模式</a>
               </h3>
               
               <time class="published" datetime='2017-09-16'>
@@ -603,7 +617,7 @@ func GetInstance() *singleton {
           <article class="mini-post">
             <header>
               <h3>
-                <a href="https://yaoshuhan.github.io/blog/20170909_ruby/">更新OSX的Ruby版本</a>
+                <a href="https://YaoShuHan.github.io/blog/20170909_ruby/">更新OSX的Ruby版本</a>
               </h3>
               
               <time class="published" datetime='2017-09-09'>
@@ -617,25 +631,11 @@ func GetInstance() *singleton {
           <article class="mini-post">
             <header>
               <h3>
-                <a href="https://yaoshuhan.github.io/blog/20170908_golang/">初识golang—并发基础</a>
+                <a href="https://YaoShuHan.github.io/blog/20170908_golang/">初识golang—并发基础</a>
               </h3>
               
               <time class="published" datetime='2017-09-08'>
                 September 8, 2017
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="https://yaoshuhan.github.io/blog/20170830_git/">git版本控制</a>
-              </h3>
-              
-              <time class="published" datetime='2017-08-30'>
-                August 30, 2017
               </time>
             </header>
             
@@ -674,7 +674,7 @@ func GetInstance() *singleton {
             <header>
               
                 <a href="/categories/development/">development</a>
-                <span style="float:right;">5</span>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -696,7 +696,7 @@ func GetInstance() *singleton {
             <header>
               
                 <a href="/categories/golang/">golang</a>
-                <span style="float:right;">5</span>
+                <span style="float:right;">6</span>
               
             </header>
           </article>
@@ -748,9 +748,9 @@ func GetInstance() *singleton {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
-      <script src="https://yaoshuhan.github.io/js/util.js"></script>
-      <script src="https://yaoshuhan.github.io/js/main.js"></script>
-      <script src="https://yaoshuhan.github.io/js/backToTop.js"></script>
+      <script src="https://YaoShuHan.github.io/js/util.js"></script>
+      <script src="https://YaoShuHan.github.io/js/main.js"></script>
+      <script src="https://YaoShuHan.github.io/js/backToTop.js"></script>
     
 
     

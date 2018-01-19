@@ -208,7 +208,7 @@
 		letter-spacing: 0.25em;
 		line-height: 1.65;
 		margin: 0 0 1em 0;
-		text-transform: uppercase;
+		text-transform: none;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -217,19 +217,19 @@
 		}
 
 	h2 {
-		font-size: 1.1em;
+		font-size: 1.5em;
 	}
 
 	h3 {
-		font-size: 0.9em;
+		font-size: 1.3em;
 	}
 
 	h4 {
-		font-size: 0.7em;
+		font-size: 1.1em;
 	}
 
 	h5 {
-		font-size: 0.7em;
+		font-size: 0.9em;
 	}
 
 	h6 {
